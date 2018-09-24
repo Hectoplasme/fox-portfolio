@@ -1,0 +1,23 @@
+block vars
+
+doctype html
+html(lang="fr")
+    head
+        include ../partials/_meta
+        block extraStyles
+
+    body(class=bodyClasses)
+
+        main.main(role="main").js-portfolio
+            block content
+
+        block footer
+            include ../components/_footer
+
+        block extraMarkup
+
+        block header
+            include ../components/_header
+
+    include ../partials/_scripts
+    block extraScripts

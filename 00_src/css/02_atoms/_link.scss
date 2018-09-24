@@ -1,0 +1,21 @@
+.link {
+  // display: inline-block;
+  position: relative;
+  top: 0rem;
+  color: darken($c-primary, 10%);
+  border-bottom: rgba(darken($c-primary, 10%), 0) 2px solid;
+  padding-bottom: 0;
+  // transform: translateY(0%);
+  transition: border-color 150ms linear, padding-bottom 100ms ease,
+    top 100ms ease;
+
+  &:hover {
+    padding-bottom: 0.2rem;
+    border-bottom: $c-primary 3px solid;
+    top: -0.2rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

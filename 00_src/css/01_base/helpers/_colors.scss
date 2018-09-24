@@ -1,0 +1,44 @@
+.text-inverted {
+  color: $c-background;
+}
+
+.text-primary {
+  color: $c-primary;
+}
+
+.text-secondary {
+  color: $c-secondary;
+}
+
+.text-white {
+  @include antialiased();
+  color: $c-white;
+}
+
+.text-black {
+  color: $c-black;
+}
+
+.text-grey {
+  color: $c-grey;
+}
+
+.bg-primary {
+  background: $c-primary;
+}
+
+.bg-secondary {
+  background: $c-secondary;
+}
+
+.bg-grey {
+  background: $c-grey;
+}
+
+.bg-black {
+  background: $c-black;
+}
+
+.bg-white {
+  background: $c-white;
+}

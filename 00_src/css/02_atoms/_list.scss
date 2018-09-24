@@ -1,0 +1,15 @@
+.list {
+  padding-right: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+  word-wrap: break-word;
+
+  &__item {
+    display: inline;
+    vertical-align: middle;
+  }
+
+  @include desktop() {
+    margin-bottom: 5rem;
+  }
+}

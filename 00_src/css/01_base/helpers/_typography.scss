@@ -1,0 +1,31 @@
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-justify {
+  text-align: justify;
+}
+
+.capitalized {
+  text-transform: capitalize !important;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
+}
+
+.uppercase {
+  @include upper();
+}
+
+.bold {
+  @include bold();
+}
+
+.italic {
+  @include italic();
+}

@@ -1,0 +1,116 @@
+.heading-1 {
+  @include font-secondary();
+  @include black();
+  font-size: 12vw;
+  line-height: 0.9;
+
+  @include tablet() {
+    font-size: $size-3xl;
+  }
+}
+
+.heading-2 {
+  @include font-secondary();
+  @include black();
+  font-size: $size-3xl;
+}
+
+.heading-3 {
+  @include font-secondary();
+  @include bold();
+  @include upper();
+  // @include italic();
+  font-size: $size-md;
+}
+
+.heading-6 {
+  @include font-secondary();
+}
+
+.teasing-1 {
+  @include font-primary();
+  @include light();
+  font-size: $size-md;
+}
+
+.teasing-2 {
+  @include font-primary();
+  @include regular();
+  // @include italic();
+  color: lighten($c-font, 50%);
+  font-size: $size-xs;
+  letter-spacing: 0.09em;
+
+  .btn:hover {
+    color: $c-font;
+  }
+}
+
+.text {
+  @include font-primary();
+  @include medium();
+  font-size: $size-sm;
+  line-height: 1.5;
+}
+
+.bold {
+  @include bold();
+}
+
+.btn {
+  @include bold();
+  @include upper();
+  font-size: $size-2xs;
+  letter-spacing: 3px;
+
+  &--lg {
+    font-size: $size-xs;
+  }
+}
+
+.logo {
+  @include font-secondary();
+  @include black();
+  font-size: $size-md;
+}
+
+.tag {
+  @include upper();
+  position: relative;
+  margin-right: -0.3em;
+  font-size: $size-2xs;
+  letter-spacing: 1px;
+  color: lighten($c-font, 30%);
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 3px;
+    width: 3px;
+    margin: 0 1rem;
+    border-radius: 50%;
+    background: lighten($c-font, 30%);
+  }
+
+  &:first-of-type::before {
+    display: none;
+  }
+
+  @include desktop() {
+    font-size: $size-sm;
+    line-height: 1.5;
+  }
+}
+
+.menu {
+  .is-active {
+    @include bold();
+  }
+}
+
+.copyright {
+  @include font-primary();
+  @include regular();
+  font-size: $size-2xs;
+}

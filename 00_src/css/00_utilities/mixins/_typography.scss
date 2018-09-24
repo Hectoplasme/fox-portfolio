@@ -1,0 +1,43 @@
+@mixin light() {
+  @include antialiased();
+  font-weight: $weight-light;
+}
+
+@mixin regular() {
+  font-weight: $weight-regular;
+}
+
+@mixin medium() {
+  font-weight: $weight-medium;
+}
+
+@mixin bold() {
+  font-weight: $weight-semibold;
+}
+
+@mixin black() {
+  font-weight: $weight-bold;
+}
+
+@mixin italic() {
+  font-style: italic;
+}
+
+@mixin antialiased() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}
+
+@mixin upper() {
+  text-transform: uppercase;
+}
+
+@mixin font-primary() {
+  font-family: $font-primary;
+  letter-spacing: 1px;
+}
+
+@mixin font-secondary() {
+  font-family: $font-secondary;
+}

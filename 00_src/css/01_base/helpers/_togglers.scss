@@ -1,0 +1,97 @@
+.is-visible-t,
+.is-visible-mt,
+.is-visible-m {
+  display: none;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+@include mobile() {
+  .is-hidden-m {
+    display: none !important;
+  }
+
+  .is-visible-m {
+    display: inherit;
+  }
+}
+
+@include tablet() {
+  .is-hidden-t {
+    display: none !important;
+  }
+
+  .is-visible-t {
+    display: inherit;
+  }
+}
+
+@include tablet-only() {
+  .is-hidden-t-o {
+    display: none !important;
+  }
+
+  .is-visible-t-o {
+    display: inherit;
+  }
+}
+@include touch() {
+  .is-hidden-touch {
+    display: none !important;
+  }
+
+  .is-visible-touch {
+    display: inherit;
+  }
+}
+
+@include desktop() {
+  .is-hidden-d {
+    display: none !important;
+  }
+
+  .is-visible-d {
+    display: inherit;
+  }
+}
+
+@include desktop-only() {
+  .is-hidden-d-o {
+    display: none !important;
+  }
+  .is-visible-d-o {
+    display: inherit;
+  }
+}
+
+@include wide() {
+  .is-hidden-w {
+    display: none !important;
+  }
+
+  .is-visible-w {
+    display: inherit;
+  }
+}
+
+@include wide-only() {
+  .is-hidden-w-o {
+    display: none !important;
+  }
+
+  .is-visible-w-o {
+    display: inherit;
+  }
+}
+
+@include fullhd() {
+  .is-hidden-f {
+    display: none !important;
+  }
+
+  .is-visible-f {
+    display: inherit;
+  }
+}
