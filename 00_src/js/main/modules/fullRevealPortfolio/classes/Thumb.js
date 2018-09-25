@@ -5,6 +5,7 @@ import GridItem from "./GridItem.js";
 class Thumb extends GridItem {
   constructor(el) {
     super(el);
+    this.thumb = true;
   }
 }
 

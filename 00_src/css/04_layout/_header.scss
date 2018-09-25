@@ -1,3 +1,6 @@
+.loading .js-enter {
+  pointer-events: none;
+}
 .header {
   position: fixed;
   z-index: 101;

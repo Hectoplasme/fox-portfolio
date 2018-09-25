@@ -435,6 +435,9 @@ body {
   margin: 0.5rem;
   background: #4718f5; }
 
+.loading .js-enter {
+  pointer-events: none; }
+
 .header {
   position: fixed;
   z-index: 101;
@@ -615,6 +618,10 @@ body {
 .no-js .main {
   top: 100vh; }
 
+.loading .main {
+  opacity: 0;
+  pointer-events: none; }
+
 .grid--outer {
   padding: 11rem 2rem 4rem 4rem; }
   @media screen and (min-width: 769px), print {
@@ -728,13 +735,8 @@ body {
         grid-area: 2 / 2 / 2 / 5;
         max-width: 50rem; }
       .grid--outer .presentation {
-        position: absolute;
-        z-index: 101;
-        right: 3rem;
-        top: 3rem;
-        width: 32vw;
-        max-width: 50rem;
-        text-align: right; }
+        margin-top: -37%;
+        grid-area: 3 / 2 / 3 / 5; }
     .grid__line:not(:first-child), .grid__line:not(:last-child) {
       border: 1px solid #eeecec;
       border-width: 0 1px; }
@@ -824,16 +826,7 @@ body {
         position: absolute;
         top: -2rem;
         right: 2.5rem;
-        color: #35c394;
         margin: 0; }
-      .grid__item:nth-of-type(2n) .grid__item__number {
-        color: #9985ee; }
-      .grid__item:nth-of-type(3n) .grid__item__number {
-        color: #e81147; }
-      .grid__item:nth-of-type(4n) .grid__item__number {
-        color: #4718f5; }
-      .grid__item:nth-of-type(5n) .grid__item__number {
-        color: #ffcf00; }
   .fullview {
     position: absolute;
     top: 0;
@@ -851,7 +844,7 @@ body {
       width: 100%;
       height: 100vh;
       display: grid;
-      grid-template-columns: 50% 45%;
+      grid-template-columns: 55% 45%;
       padding: 10vh 10vw;
       margin: 0;
       background-position: 50% 50%;
@@ -882,5 +875,17 @@ body {
   .fullview__item {
     pointer-events: auto !important;
     opacity: 1 !important; } }
+
+@media screen and (min-width: 1216px) {
+  .grid--outer .presentation {
+    position: absolute;
+    z-index: 101;
+    right: 3rem;
+    top: 3rem;
+    width: 32vw;
+    max-width: 55rem;
+    margin-top: 0;
+    text-align: right;
+    grid-area: auto; } }
 
 /*# sourceMappingURL=maps/styles.css.map */

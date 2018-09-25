@@ -1,5 +1,4 @@
 import utils from "../../../libs/utils.js";
-import Grid from "./classes/Grid";
 import GridItem from "./classes/GridItem";
 import Thumb from "./classes/Thumb";
 import anime from "animejs";
