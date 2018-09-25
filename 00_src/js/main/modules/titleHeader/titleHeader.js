@@ -45,6 +45,7 @@ const titleHeader = {
   },
 
   startAnimation() {
+    this.DOM.header.style.background = "transparent";
     this.DOM.title.forEach((word, pos) => {
       this.words.push(new Word(word, this.titleEffect.options));
     });

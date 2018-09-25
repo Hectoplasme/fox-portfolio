@@ -5,7 +5,6 @@ import anime from "animejs";
 
 const fullRevealPortfolio = {
   init() {
-    console.log("pouet ça marche");
     this.bindUI();
     this.setProperties();
     this.bindEvents();
@@ -39,8 +38,6 @@ const fullRevealPortfolio = {
 
     // current thumb/project index
     this.current = -1;
-
-    // this.grid = new Grid(this.DOM.grid);
   },
 
   bindEvents() {
@@ -135,7 +132,6 @@ const fullRevealPortfolio = {
     });
   },
   onResize() {
-    console.log("resiiiize");
     utils.winsize = { width: window.innerWidth, height: window.innerHeight };
     if (this.isGridHidden) {
       this.movable.forEach(item => {
@@ -143,7 +139,7 @@ const fullRevealPortfolio = {
           anime({
             targets: child,
             translateY:
-              item.constructor.name === "Thumb"
+              item.thumb
                 ? -1 * utils.winsize.height - 30
                 : -1 * utils.winsize.height - 30 + child.offsetHeight / 2
           });

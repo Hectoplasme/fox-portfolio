@@ -18,10 +18,11 @@ import imagesLoaded from "imagesloaded";
     () => {
       document.querySelector(".js-enter").innerHTML = "Entrez";
       document.body.classList.remove("loading");
+
+      if (document.querySelector(".js-header")) titleHeader.init();
+      if (document.querySelector(".js-portfolio")) fullRevealPortfolio.init();
     }
   );
 
   // console.log(titleHeader);
-  if (document.querySelector(".js-header")) titleHeader.init();
-  if (document.querySelector(".js-portfolio")) fullRevealPortfolio.init();
 })();
