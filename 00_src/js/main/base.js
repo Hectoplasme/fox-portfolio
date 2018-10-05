@@ -16,7 +16,8 @@ import imagesLoaded from "imagesloaded";
     document.querySelectorAll([".fullview__item", ".grid__item-bg"]),
     { background: true },
     () => {
-      document.querySelector(".js-enter").innerHTML = "Entrez";
+      if (document.querySelector(".js-enter"))
+        document.querySelector(".js-enter").innerHTML = "Entrez";
       document.body.classList.remove("loading");
 
       if (document.querySelector(".js-header")) titleHeader.init();
