@@ -4,11 +4,7 @@
   position: relative;
 }
 
-.no-js .main {
-  top: 100vh;
-}
-
-.loading .main {
+.loading:not(.no-js) .main {
   opacity: 0;
   pointer-events: none;
 }
@@ -603,8 +599,36 @@
   }
 }
 
-// @supports (display: grid) {
-//   .grid--outer {
-//     background: #000;
-//   }
-// }
+.no-js .main {
+  height: auto;
+  overflow: initial;
+  top: 100vh;
+
+  .grid__line,
+  .grid--thumbs,
+  .revealer {
+    display: none;
+  }
+
+  .grid--outer {
+    position: relative;
+    display: block;
+    margin: 10vh 10vw;
+    width: auto;
+    height: auto;
+    overflow: initial;
+    opacity: 1;
+  }
+
+  .presentation {
+    position: relative;
+    padding-left: 2vw;
+    text-align: left;
+  }
+
+  .fullview,
+  .fullview__item {
+    position: relative;
+    opacity: 1;
+  }
+}

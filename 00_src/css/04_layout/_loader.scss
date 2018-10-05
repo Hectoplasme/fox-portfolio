@@ -1,6 +1,9 @@
 .loader-wrap {
   display: none;
 }
+// .loading:not(.no-js) .loader-wrap {
+//   display: block;
+// }
 
 .loading .loader-wrap {
   display: block;
@@ -11,6 +14,7 @@
   width: 100%;
   height: 100vh;
   background: $c-grey;
+  opacity: 1;
 
   $animation-duration: 1.8s;
 
@@ -57,5 +61,26 @@
   }
   100% {
     transform: translateX(40px);
+  }
+}
+
+.no-js {
+  .loader-wrap {
+    animation-name: displayLoader;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    animation-delay: 10s;
+  }
+}
+
+@keyframes displayLoader {
+  from {
+    display: block;
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    display: none !important;
   }
 }

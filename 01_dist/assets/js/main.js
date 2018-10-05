@@ -70,17 +70,33 @@ var fullRevealPortfolio = require("./modules/fullRevealPortfolio/fullRevealPortf
 
 
 (function () {
-  // kick off the smoothscroll polyfill!
-  _smoothscrollPolyfill2.default.polyfill();
+  //display safari template
+  var ua = navigator.userAgent.toLowerCase();
+  console.log(ua);
+  if (!!navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) {
+    document.body.classList.remove("no-js");
+    // kick off the smoothscroll polyfill!
+    _smoothscrollPolyfill2.default.polyfill();
 
-  // Preload all the images in the page..
-  (0, _imagesloaded2.default)(document.querySelectorAll([".fullview__item", ".grid__item-bg"]), { background: true }, function () {
-    if (document.querySelector(".js-header")) document.querySelector(".js-enter").innerHTML = "Entrez";
-    document.body.classList.remove("loading");
+    // Preload all the images in the page..
+    (0, _imagesloaded2.default)(document.querySelectorAll([".fullview__item", ".grid__item-bg"]), { background: true }, function () {
+      document.body.classList.add("no-js");
+     
+    });
+  } else {
+    document.body.classList.remove("no-js");
+    // kick off the smoothscroll polyfill!
+    _smoothscrollPolyfill2.default.polyfill();
 
-    if (document.querySelector(".js-header")) titleHeader.init();
-    if (document.querySelector(".js-portfolio")) fullRevealPortfolio.init();
-  });
+    // Preload all the images in the page..
+    (0, _imagesloaded2.default)(document.querySelectorAll([".fullview__item", ".grid__item-bg"]), { background: true }, function () {
+      if (document.querySelector(".js-enter")) document.querySelector(".js-enter").innerHTML = "Entrez";
+      document.body.classList.remove("loading");
+
+      if (document.querySelector(".js-header")) titleHeader.init();
+      if (document.querySelector(".js-portfolio")) fullRevealPortfolio.init();
+    });
+  }
 
   // console.log(titleHeader);
 })();
